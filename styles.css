@@ -8,13 +8,20 @@ body {
   text-align: center;
 }
 
+header h1, .section-container h2, .events-section h2 {
+  font-family: "Baloo Chettan"; /* Replace with the exact font from the PDF if identified */
+}
+
+/* Header (About Us Section) */
 header {
   text-align: center;
   padding: 20px;
+  background-color: #fff;
 }
 
 header h1 {
   font-size: 32px;
+  font-weight: bolder;
   margin: 10px 0;
 }
 
@@ -26,75 +33,135 @@ header h2 {
 
 header h3 {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 550;
   margin: 10px 0;
   color: #222;
 }
 
 header .intro-text {
-  max-width: 800px;
+  max-width: 1150px;
   margin: 0 auto;
   font-size: 16px;
   line-height: 1.5;
+  text-align: left;
 }
 
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 28px;
+  }
+  header h2 {
+    font-size: 18px;
+  }
+  header h3 {
+    font-size: 16px;
+  }
+  header .intro-text {
+    font-size: 14px;
+  }
+}
+
+/* About Section (What we do, Our Vision) */
 .about-section {
   background-color: #fff;
   padding: 40px 20px;
   text-align: center;
 }
 
-.about-section .section-header {
+.section-container {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
-.about-section .section-header h2 {
+.about-section .section-content h2 {
   flex: 1;
   font-size: 20px;
-  text-align: center;
+  font-weight: bolder;
+  text-align: right;
   color: #333;
-}
-
-.about-section .section-content {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 .about-section .section-content p {
   flex: 1;
   max-width: 400px;
   text-align: justify;
+  padding-top: 15px;
 }
 
+.vertical-line {
+  position: static;
+  left: 50%;
+  top: 10px;
+  height: 150px;
+  width: 2px;
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-section .section-content h2 {
+    text-align: center;
+  }
+  .vertical-line {
+    display: none;
+  }
+  .about-section .section-content p {
+    text-align: center;
+  }
+}
+
+/* Events Section */
 .events-section {
-  background-color: #ececec;
+  background-color: #fff;
   padding: 40px 20px;
 }
 
 .events-section h2 {
   text-align: center;
   font-size: 24px;
+  font-weight: bolder;
   margin-bottom: 30px;
 }
 
 .event-details {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
   gap: 20px;
   flex-wrap: wrap;
+  background-color: #ececec;
+}
+
+.event-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
+  margin: 10px;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 10%;
 }
 
 .date-box {
-  background-color: #fff;
   text-align: center;
   padding: 20px;
   border-radius: 8px;
   flex: 1;
-  max-width: 150px;
+  max-width: 250px;
+}
+
+.date-box #date {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .date-box p {
@@ -104,22 +171,45 @@ header .intro-text {
 }
 
 .event-description {
-  background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   flex: 2;
-  max-width: 500px;
+  max-width: 600px;
 }
 
 .event-description h3 {
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  font-weight: 550;
 }
 
 .event-description p {
   font-size: 16px;
   line-height: 1.5;
+  text-align: left;
 }
+
+.event-carousel .carousel-control-prev,
+.event-carousel .carousel-control-next {
+  filter: invert(100%);
+}
+
+@media (max-width: 768px) {
+  .event-details {
+    flex-direction: column;
+  }
+  .event-image {
+    width: 150px;
+    height: 150px;
+  }
+  .date-box {
+    max-width: 200px;
+  }
+  .event-description {
+    max-width: 100%;
+  }
+}
+
 body {
   font-family: Arial, sans-serif;
   text-align: center;
