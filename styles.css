@@ -1,67 +1,69 @@
 /* styles.css */
 body {
-  font-family: "Arial", sans-serif; /* Replace with the exact font from the PDF if identified */
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #000;
   background-color: #f9f9f9;
   text-align: center;
 }
 
 header h1, .section-container h2, .events-section h2 {
-  font-family: "Baloo Chettan"; /* Replace with the exact font from the PDF if identified */
+  font-family: "Baloo Chettan";
 }
 
-/* Header (About Us Section) */
 header {
   text-align: center;
-  padding: 20px;
+  letter-spacing: 2%;
   background-color: #fff;
 }
 
 header h1 {
-  font-size: 32px;
+  font-size: 55px !important;
   font-weight: bolder;
-  margin: 10px 0;
+  line-height: 79.2px;
+  margin: 32px auto 0;
 }
 
 header h2 {
-  font-size: 20px;
-  margin: 5px 0;
-  color: #555;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  margin: 25px auto 0;
 }
 
 header h3 {
-  font-size: 18px;
-  font-weight: 550;
-  margin: 10px 0;
-  color: #222;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  margin: 12px auto 0;
+  letter-spacing: 3%;
 }
 
 header .intro-text {
   max-width: 1150px;
-  margin: 0 auto;
+  line-height: 25px;
+  margin: 25px auto 0;
   font-size: 16px;
-  line-height: 1.5;
+  font-weight: 400;
   text-align: left;
 }
 
 @media (max-width: 768px) {
   header h1 {
-    font-size: 28px;
+    font-size: 30px;
   }
   header h2 {
-    font-size: 18px;
+    font-size: 16px;
   }
   header h3 {
-    font-size: 16px;
+    font-size: 14px;
   }
   header .intro-text {
     font-size: 14px;
   }
 }
 
-/* About Section (What we do, Our Vision) */
 .about-section {
   background-color: #fff;
   padding: 40px 20px;
@@ -72,30 +74,33 @@ header .intro-text {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  letter-spacing: 2%;
 }
 
 .about-section .section-content h2 {
   flex: 1;
-  font-size: 20px;
+  margin-top: 57px;
+  font-size: 46px;
   font-weight: bolder;
+  line-height: 66.24px;
   text-align: right;
-  color: #333;
 }
 
 .about-section .section-content p {
   flex: 1;
-  max-width: 400px;
+  max-width: 572px;
   text-align: justify;
   padding-top: 15px;
 }
 
 .vertical-line {
   position: static;
+  margin-top: 57px;
   left: 50%;
   top: 10px;
-  height: 150px;
-  width: 2px;
-  background-color: #333;
+  height: 250px;
+  width: 3px;
+  background-color: #000;
 }
 
 @media (max-width: 768px) {
@@ -114,79 +119,83 @@ header .intro-text {
   }
 }
 
-/* Events Section */
 .events-section {
   background-color: #fff;
+  letter-spacing: 2%;
   padding: 40px 20px;
 }
 
 .events-section h2 {
   text-align: center;
-  font-size: 24px;
+  margin: 0 auto;
+  font-size: 55px;
   font-weight: bolder;
-  margin-bottom: 30px;
+  line-height: 79.2px;
 }
 
 .event-details {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 20px;
+  justify-content: space-between;
   flex-wrap: wrap;
-  background-color: #ececec;
+  margin: 34px 50px 0;
+  border-radius: 30px;
+  background-color: #CBC9C9;
 }
 
 .event-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 10%;
-  margin: 10px;
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  margin: 50px;
 }
 
 .event-image img {
   width: 100%;
   height: 100%;
   background-size: cover;
-  border-radius: 10%;
+  border-radius: 30px;
 }
 
 .date-box {
   text-align: center;
-  padding: 20px;
-  border-radius: 8px;
   flex: 1;
-  max-width: 250px;
+  max-width: 375px;
 }
 
 .date-box #date {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 55px;
 }
 
 .date-box p {
-  margin: 5px 0;
-  font-size: 16px;
-  color: #333;
+  margin-top: 5px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 55px;
+  text-align: left;
 }
 
 .event-description {
-  padding: 20px;
-  border-radius: 8px;
+  padding: 0;
+  margin-top: 61px;
   flex: 2;
-  max-width: 600px;
+  max-width: 490px;
+  letter-spacing: 2%;
 }
 
 .event-description h3 {
-  font-size: 18px;
-  margin-bottom: 20px;
-  font-weight: 550;
+  font-size: 36px;
+  font-weight: 500;
 }
 
 .event-description p {
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 25px;
+  margin-top: 44px;
   text-align: left;
+  height: 258px;
 }
 
 .event-carousel .carousel-control-prev,
